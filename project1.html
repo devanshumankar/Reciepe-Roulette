@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="project1.css" />
+	</head>
+
+	<body>
+		<h1>Reciepe Roulette</h1>
+		<form>
+			<div class="receipe-name d1">
+				<label for="rec-name">Receipe Name</label>
+				<input
+					type="text"
+					required
+					minlength="3"
+					id="rec-name"
+					placeholder="enter receipe name"
+				/>
+			</div>
+
+			<div class="ingredients d1">
+				<label for="ing">Ingredients</label>
+				<textarea required placeholder="enter ingredients" id="ing"></textarea>
+			</div>
+
+			<div class="time d1">
+				<label for="cooking-time">Cooking time</label>
+				<input
+					type="number"
+					required
+					min="5"
+					placeholder="enter cooking-time"
+					id="cooking-time"
+				/>
+			</div>
+
+			<div class="dif-level">
+				<label>Difficulty Level</label>
+				<input type="radio" value="Easy" name="level" />Easy
+				<input type="radio" value="Medium" name="level" />Medium
+				<input type="radio" value="Hard" name="level" />Hard
+			</div>
+
+			<div class="category">
+				<label>Category</label>
+				<input type="checkbox" name="category" value="BreakFast" />BreakFast
+				<input type="checkbox" name="category" value="Lunch" />Lunch
+				<input type="checkbox" name="category" value="Dinner" />Dinner
+				<input type="checkbox" name="category" value="Snacks" />Snacks
+			</div>
+
+			<button>Submit</button>
+		</form>
+		<section>
+			<button>All receipe</button>
+			<button>Favourite</button>
+			<button>Recently Cooked</button>
+			<button>Spin the wheel !</button>
+		</section>
+		<div class="cards">
+			<!-- <div class="card">
+            <h3>Name</h3>
+            <p>Time</p>
+            <p>Difficulty</p>
+            <p>Category</p>
+            <div class="buttons">
+                <button class="cook">Cook This</button>
+                <button class="fav"> Favourite</button>
+                <button class="del">Delete</button>
+            </div>
+        	</div> -->
+		</div>
+		<script src="project1.js"></script>
+	</body>
+</html>
