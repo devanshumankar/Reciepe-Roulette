@@ -63,7 +63,16 @@ textarea:hover {
 .category label {
 	margin-right: 10px;
 }
-
+.highlight {
+	background-color: gold !important;
+	transform: scale(1.1);
+	transition: 0.3s;
+}
+.highlight-main {
+	background-color: rgb(109, 109, 255) !important;
+	transform: scale(1.1);
+	transition: 0.3s;
+}
 button {
 	height: 30px;
 	width: 25%;
@@ -74,11 +83,11 @@ button {
 }
 
 .cards {
-	width: 100vw;
+	width: 85vw;
 	display: flex;
-	justify-content: space-around;
+	justify-content: start;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: 40px;
 }
 
 .card {

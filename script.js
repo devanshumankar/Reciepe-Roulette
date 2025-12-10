@@ -32,6 +32,7 @@ submitbtn.addEventListener("click", (e) => {
 	recName.value = "";
 	time.value = "";
 	ing.value = "";
+	document.querySelector("#recipe-section").scrollIntoView({ behavior: "smooth" });
 });
 
 function renderReceipe(showFav = false) {
@@ -116,16 +117,21 @@ const favBtn = document.querySelectorAll("section button")[1];
 const recCookedBtn = document.querySelectorAll("section button")[2];
 const spinBtn = document.querySelectorAll("section button")[3];
 
-spinBtn.addEventListener("click", () => {
-	for (let i of cards.children) {
-		i.style.backgroundColor = "";
-		i.style.transform = "scale(1)";
+spinBtn.addEventListener("click", async () => {
+	if (document.querySelector(".highlight-main")) {
+		document.querySelector(".highlight-main").classList.remove("highlight-main");
+	}
+
+	for (let i = 0; i < 25; i++) {
+		const num = Math.floor(Math.random() * cards.children.length);
+		const ele = cards.children[num];
+		ele.classList.add("highlight");
+		await new Promise((res) => setTimeout(res, 200));
+		ele.classList.remove("highlight");
 	}
 	const num = Math.floor(Math.random() * cards.children.length);
 	const ele = cards.children[num];
-	ele.style.backgroundColor = "gold";
-	ele.style.transform = "scale(1.1)";
-	ele.style.transition = "0.3s";
+	ele.classList.add("highlight-main");
 });
 
 favBtn.addEventListener("click", () => {
